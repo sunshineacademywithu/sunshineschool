@@ -59,21 +59,22 @@ gulp.task('html', function() {
 // ЗАДАЧА: Копирование изображений
 gulp.task('img', function () {
     return gulp.src([
-        dirs.source + '/assets/img/*.{gif,png,jpg,jpeg,svg}', // какие файлы обрабатывать (путь из константы, маска имени, много расширений)
+        dirs.source + '/assets/img/**/*.{gif,png,jpg,jpeg,svg}', // какие файлы обрабатывать (путь из константы, маска имени, много расширений)
     ],
-        {since: gulp.lastRun('img')} // оставим в потоке обработки только изменившиеся от последнего запуска задачи (в этой сессии) файлы
+        { encoding: false, since: gulp.lastRun('img') } // оставим в потоке обработки только изменившиеся от последнего запуска задачи (в этой сессии) файлы
     )
     .pipe(plumber({ errorHandler: onError }))
     .pipe(newer(dirs.build + '/assets/img')) // оставить в потоке только новые файлы (сравниваем с содержимым папки билда)
     .pipe(gulp.dest(dirs.build + '/assets/img')); // записываем файлы (путь из константы)
 });
 
+
 // ЗАДАЧА: Копирование изображений
 gulp.task('images', function () {
     return gulp.src([
-        dirs.source + '/assets/images/*.{gif,png,jpg,jpeg,svg}', // какие файлы обрабатывать (путь из константы, маска имени, много расширений)
+        dirs.source + '/assets/images/**/*.{gif,png,jpg,jpeg,svg}', // какие файлы обрабатывать (путь из константы, маска имени, много расширений)
     ],
-        {since: gulp.lastRun('img')} // оставим в потоке обработки только изменившиеся от последнего запуска задачи (в этой сессии) файлы
+        { encoding: false, since: gulp.lastRun('images') } // оставим в потоке обработки только изменившиеся от последнего запуска задачи (в этой сессии) файлы
     )
     .pipe(plumber({ errorHandler: onError }))
     .pipe(newer(dirs.build + '/assets/images')) // оставить в потоке только новые файлы (сравниваем с содержимым папки билда)
@@ -86,7 +87,7 @@ gulp.task('imguploads', function () {
         dirs.source + '/uploads/*.{gif,png,jpg,jpeg,svg}', // какие файлы обрабатывать (путь из константы, маска имени, много расширений)
         dirs.source + '/uploads/**/*.{gif,png,jpg,jpeg,svg}', // какие файлы обрабатывать (путь из константы, маска имени, много расширений)
     ],
-        {since: gulp.lastRun('img')} // оставим в потоке обработки только изменившиеся от последнего запуска задачи (в этой сессии) файлы
+        { encoding: false, since: gulp.lastRun('imguploads') } // оставим в потоке обработки только изменившиеся от последнего запуска задачи (в этой сессии) файлы
     )
     .pipe(plumber({ errorHandler: onError }))
     .pipe(newer(dirs.build + '/uploads')) // оставить в потоке только новые файлы (сравниваем с содержимым папки билда)
@@ -165,20 +166,20 @@ gulp.task('clean', function () {
 
 // ЗАДАЧА: Перемещение шрифтов
 gulp.task('copyFonts', function() {
-    return gulp.src(dirs.source + '/assets/fonts/**/*.{woff,woff2,ttf,otf,eot,svg}')
-    .pipe(gulp.dest('build' + '/assets/fonts'));
+    return gulp.src(dirs.source + '/assets/fonts/**/*.{woff,woff2,ttf,otf,eot,svg}', { encoding: false })
+    .pipe(gulp.dest(dirs.build + '/assets/fonts'));
 });
 
 // ЗАДАЧА: Перемещение стилей
 gulp.task('copyCSS', function() {
     return gulp.src(dirs.source + '/assets/css/**/*.css')
-    .pipe(gulp.dest('build' + '/assets/css'));
+    .pipe(gulp.dest(dirs.build + '/assets/css'));
 });
 
 // ЗАДАЧА: Перемещение скриптов
 gulp.task('copyJS', function() {
     return gulp.src(dirs.source + '/assets/js/**/*.js')
-    .pipe(gulp.dest('build' + '/assets/js'));
+    .pipe(gulp.dest(dirs.build + '/assets/js'));
 });
 
 // ЗАДАЧА: Сборка PHP
@@ -251,8 +252,8 @@ gulp.task('serve', gulp.series('build', function() {
         gulp.series('svgstore', 'html', reloader)
     );
     gulp.watch( // следим за изображениями
-        dirs.source + '/assets/images/*.{gif,png,jpg,jpeg,svg}',
-        gulp.series('img', reloader) // при изменении оптимизируем, копируем и обновляем в браузере
+        dirs.source + '/assets/images/**/*.{gif,png,jpg,jpeg,svg}',
+        gulp.series('images', reloader) // при изменении оптимизируем, копируем и обновляем в браузере
     );
     
     gulp.watch( // следим за изображениями
@@ -261,6 +262,15 @@ gulp.task('serve', gulp.series('build', function() {
             dirs.source + '/uploads/*.{gif,png,jpg,jpeg,svg}',
         ],
         gulp.series('imguploads', reloader) // при изменении оптимизируем, копируем и обновляем в браузере
+    );
+
+    gulp.watch( // следим за шрифтами
+        dirs.source + '/assets/fonts/**/*',
+        gulp.series('copyFonts', reloader)
+    );
+    gulp.watch( // следим за CSS библиотеками
+        dirs.source + '/assets/css/**/*.css',
+        gulp.series('copyCSS', reloader)
     );
     gulp.watch( // следим за JS
         dirs.source + '/assets/js/*.js',

@@ -1,0 +1,125 @@
+ form {
+       // background-color: #A10115;
+        //border-radius: 30px;
+        //border: 7px solid $text;
+       // padding: 20px;
+       // max-width: 534px;
+
+        .form-style, .form-style-2 {
+            background-color: $background;
+            border-radius: 30px;
+            border: 7px solid $text;
+            padding: 30px;
+            max-width: 534px;
+        }
+
+        .form-style-2 {
+            margin-left: 50px;
+            max-height: 370px;
+        }
+       
+        
+        legend {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+
+        .form-title {
+            color: $text;
+            font-weight: 400;
+        }
+
+
+        .special {
+            display: inline-block;
+            padding: 7px 15px;
+            border-color: $hover;
+            background-color: $hover;
+            border-radius: 8px;
+            color: $text2;
+            font-weight: 300;
+            font-size: 18px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+
+            &:hover {
+                background-color: $check;
+                border-color: $check;
+                color: $text;
+            }
+        }
+
+
+        .form-check-input:checked + .btn {
+            background-color: $check;
+            border-color: $check;
+            color: $text;
+      }
+
+        .form-control {
+            padding: 15px 12px;
+            font-size: 16px;
+
+            &:hover, &:focus {
+                  border-color: $check;
+            }
+        }
+
+        .check {
+            color: $text;
+            font-weight: 300;
+            
+            &:checked {
+                background-color: $check;
+                border-color: $check;
+            }
+        }
+
+        .btn-lg {
+            width: 100%;
+        }
+        
+        .social-nav {
+            margin-top: 15px;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+
+        }
+        
+        .icon {
+            width: 55px;
+            height: 55px;
+        }
+
+        .police-description {
+            color: $text2;
+            font-weight: 400;
+        }
+
+        
+
+        .police {
+            background-color: $text;
+            border-color: $text2;
+
+            &:focus, &:hover, &:checked, &:active {
+                background-color: $hover;
+                border-color: $text2;
+            }
+        }
+
+}
+
+.police-link {
+            color: $text;
+        
+           // display: inline-block;
+
+            &:hover {
+                background-color: $hover;
+            }
+        }

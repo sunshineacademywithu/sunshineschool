@@ -1,0 +1,53 @@
+.sociales-1 {
+    margin-top: 50px;
+}
+
+
+.form-name {
+    font-size: 20px;
+    font-weight: 400;
+    margin-right: 10px;
+    background-color: $text;
+    padding: 10px 15px;
+    border-radius: 30px;
+}
+
+.choose {
+    display: flex;
+    gap: 45px;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+.option {
+    border-color: $check;
+    font-size: 16px;
+    background-color: transparent;
+
+}
+
+select option {
+    &:hover {
+ background-color: $check;
+    }
+   
+
+}
+
+option {
+    background-color: $background;
+    color: $text;
+     &:hover, &:focus {
+background-color: $check !important; 
+   }
+}
+
+
+
+
+   
+
+
+
+
+

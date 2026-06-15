@@ -1,8 +1,163 @@
-header{
-	height: 7vh;
-	padding: 15px 0;
-	background: #222;
-	a {
-		color: #fff;
+header {
+	background-color: $background;
+	transition: .3s;
+	z-index: 10;
+
+    &.fixed {
+       backdrop-filter: blur(24.5px);
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        + .wrapper {
+            padding-top: 156px;
+        }
+    }    
+       
+
+	.navbar {
+        padding: 0;
+
+        &-brand {
+        padding: 0;
+        margin-left: 40px;
+        }
+    }
+
+    .brand-img {
+        margin-top: 40px;
+        margin-left: -10px;
+    }
+
+	.container {
+		max-width: 1929px;
+		padding: 20px;
+        margin: 0;
 	}
+
+    .nav-link {
+        color: $text;
+        font-size: $font-size;
+        text-decoration: none;
+
+        &:hover,
+        &.dropdown-toggle.show {
+            color: $text2;
+            text-decoration: none;
+
+            &:after {
+                border-color: $text2;
+            }
+        }
+
+    }
+
+    .blog {
+    background-color: $text;
+    color: $text2;
+    border-color: $text;
+    opacity: calc(70%);
+}
+
+
+}
+
+body header .container {
+    margin-bottom: 0;
+
+}
+
+
+.navbar-nav_main-navigation {
+    position: absolute;
+    display: flex;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    gap: 90px;
+
+    .nav-item {
+
+        .nav-link {
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+    }
+}
+
+.navbar-nav_language {
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.dropdown-toggle {
+    &::after {
+        display: none;
+    }
+}
+
+.mobile-menu {
+    display: none;
+}
+
+.mobile-menu-toggle {
+    width: 25px;
+    height: 30px;
+    padding: 0;
+    border: 0;
+    border-radius: 8px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 3px;
+
+    &:hover,
+    &:focus,
+    &.show {
+        background-color: #172017;
+    }
+
+    .button-s {
+        background-color: $text;
+    }
+}
+
+.mobile-menu .dropdown-menu {
+    min-width: 190px;
+    padding: 12px;
+    border: 0;
+    border-radius: 14px;
+    background-color: #172017;
+}
+
+.mobile-menu .dropdown-item {
+    color: $text;
+    border-radius: 8px;
+    font-size: 18px;
+    padding: 10px 14px;
+
+    &:hover,
+    &:focus {
+        color: $text2;
+        background-color: $check;
+    }
+}
+
+.offcanvas {
+   // width: 320px;
+    position: relative;
+}
+
+.menu-link {
+    text-decoration: none;
+    color: $text2;
+    font-size: 18px;
+    transition: 0.3;
+
+    &:hover {
+        padding-left: 5px;
+
+    }
 }

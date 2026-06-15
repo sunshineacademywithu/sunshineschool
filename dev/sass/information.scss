@@ -1,0 +1,71 @@
+.information {
+    .container {
+        margin-bottom: 100px;
+    }
+}
+
+
+.sociales {
+    margin-top: 200px;
+}
+
+.white {
+    margin-top: 100px;
+    background-color: #fff;
+    color: $text2;
+    background: rgba(255, 255, 255, 0.733); 
+    border-radius: 50px;
+   // height: 450px;
+   // padding: 67px;
+    position: relative;
+}
+
+.infor-title {
+    margin: 35px 0 35px 0;
+
+    &::before {
+        content: "";
+        position: absolute;
+        width: 150px;
+        height: 150px;
+        top: 6px;
+        left: -40px;
+        background: url(./assets/img/star.svg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+        z-index: -1;
+    }
+}
+
+.infor-subtitle {
+    margin: 0 20px 25px 20px;
+   // padding: 20px;
+}
+
+.padd {
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
+
+.form-label {
+    color: $text;
+}
+
+.img-couple {
+    position: absolute;
+    right: -90px;
+    top: 260px;
+    max-width: 45%;
+    max-height: 821px;
+}
+
+.color {
+    color: $background;
+}
+
+.information-description {
+    margin-left: 20px;
+}
+

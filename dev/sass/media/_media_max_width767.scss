@@ -1,3 +1,48 @@
 @media screen and (max-width: 767px) {
+    header {
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+        }
+    }
 
+    .navbar-nav_main-navigation {
+        display: none;
+    }
+
+    .navbar-nav_language {
+        display: flex;
+        margin-left: auto;
+        padding: 0 12px 0 0;
+    }
+
+    .navbar-nav_language .nav-link {
+        font-size: 16px;
+        padding: 0;
+    }
+
+    .mobile-menu {
+        display: block;
+        margin-left: 0;
+    }
+
+    .mobile-menu .dropdown-menu {
+        position: fixed !important;
+        top: 65px !important;
+        left: 0 !important;
+        right: 0 !important;
+        width: 100vw;
+       // display: flex;
+        align-items: center;
+        min-width: 100vw;
+        border-radius: 0;
+        background-color: $background;
+        transform: none !important;
+    }
+
+    .mobile-menu .dropdown-item {
+        text-align: center;
+    }
 }

@@ -1,0 +1,25 @@
+.accordion-item {
+    background-color: #b6452c;
+    border-color: #e94f08;
+    color: $text;
+}
+
+.accordion-button, .accordion-button.collapsed  {
+    font-weight: 400;
+    font-size: 18px;
+background-color: #ebc634;
+    border-color: #e94f08;
+    color: $text2;
+
+    &:focus, &:active, &:focus, &:hover {
+        background-color: #ebc634;
+        background: #e94f08;
+        color: $text2;
+    }
+
+    &:not(.collapsed) {
+  background-color: #e94f08;
+  color: $text2;
+}
+
+}

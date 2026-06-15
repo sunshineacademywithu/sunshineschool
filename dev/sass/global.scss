@@ -1,0 +1,101 @@
+body {
+    font-size: 16px;
+    display: flex;
+    color: $text2;
+    font-family: $font-primary;
+    flex-direction: column;
+    scroll-behavior: smooth;
+
+    h1 {
+        font-size: 72px;
+    }
+
+    h2 {
+        font-weight: 500;
+    }
+
+    h3 {
+        font-weight: 300;
+    }
+
+    h5 {
+        font-weight: 300;
+    }
+
+    
+
+    .wrapper {
+        position: relative;
+        overflow: hidden;
+        min-height: 2500px;
+        
+    }
+
+    .wrapper::before {
+        content: "";
+        position: absolute;
+        inset: -20px;
+        background-image: url(assets/img/banner-image.png);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        filter: blur(5px);
+        z-index: 0;
+    }
+
+    .wrapper > * {
+        position: relative;
+        z-index: 1;
+    }
+
+    
+    .wrapper.information,
+    .wrapper.service,
+    .wrapper.price,
+    .wrapper.contacts {
+        min-height: 0;
+    }
+
+    .wrapper.information .container,
+    .wrapper.service .container,
+    .wrapper.price .container,
+    .wrapper.contacts .container {
+        margin-bottom: 200px;
+    }
+
+    .wrapper.information::before,
+    .wrapper.service::before,
+    .wrapper.price::before,
+    .wrapper.contacts::before {
+        background-position: center top;
+    }
+.container {
+    max-width: 1440px;
+    padding: 34px 25px 54px;
+    position: relative;
+    margin-bottom: 200px;
+   }
+
+
+
+    .btn {
+    color: $text;
+    background-color: $text2;
+    border-color: $text2;
+    font-size: 24px;
+    padding: 18px 55px;
+    position: relative;
+  
+
+    &:hover{
+         background-color: $hover;
+        border-color: $hover;
+        color: $text2;
+        }
+}
+
+.btn-primary {
+    --bs-btn-active-bg: #1e0000;
+}
+
+}

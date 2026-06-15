@@ -1,3 +1,43 @@
-h1 {
-    color: blue;
+.banner {
+    margin-top: 150px;
+}
+
+.banner-title {
+    font-size: 72px;
+    color: $text2;
+    font-weight: 400;
+    margin-bottom: 54px;
+}
+
+.banner-phrase {
+    background-color: #fff;
+    color: $text2;
+    background: rgba(255, 255, 255, 0.733); 
+    color: #fff;
+    border-radius: 50px;
+    height: 450px;
+    padding: 67px;
+    position: relative;
+}
+
+.banner-subtitle {
+    color: $text2;
+    font-weight: 300;
+    font-style: italic;
+    font-size: 24px;
+    max-width: 648px;
+}
+
+.banner-phrase .banner-btn {
+    position: absolute;
+    left: 67px;
+    bottom: 47px;
+}
+
+.img-boy {
+    position: absolute;
+    right: 1px;
+    bottom: -130px;
+    max-width: 45%;
+    max-height: 821px;
 }

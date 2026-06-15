@@ -1,89 +1,61 @@
-<header class="login">
+<header class="global fixed">
     <nav class="navbar navbar-expand-lg">
         <div class="container">
             <a class="navbar-brand" href="index.html">
-                <img src="assets/img/Group.svg" alt="logo">
+                <img src="assets/img/mooooon.svg" alt="logo" class="logo">
+                    <img src="assets/img/brand.svg" class="brand-img" alt="sitename">
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler__line"></span>
-                <span class="navbar-toggler__line"></span>
-                <span class="navbar-toggler__line"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="true" aria-label="Toggle navigation">
-                    <span class="navbar-toggler__line"></span>
-                    <span class="navbar-toggler__line"></span>
-                    <span class="navbar-toggler__line"></span>
-                </button>
-                <div class="status status-verification-failed">верифікацію не пройдено</div>
-                <ul class="navbar-nav navbar-nav_country navbar-nav_middle">
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Україна
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="index.html">Україна</a></li>
-                            <li><a class="dropdown-item" href="index.html">Польща</a></li>
-                            <li><a class="dropdown-item" href="index.html">Чехія</a></li>
-                        </ul>
-                    </li>
-                </ul>
-
-
                 <ul class="navbar-nav navbar-nav_main-navigation">
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="services-list.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            послуги
-                         </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="service-1.html">перекази по Україні</a></li>
-                            <li><a class="dropdown-item" href="service-2.html">міжнародні перекази</a></li>
-                            <li><a class="dropdown-item" href="service-3.html">swift-перекази</a></li>
-                            <li><a class="dropdown-item" href="service-4.html">обмін криптовалюти</a></li>
-                            <li><a class="dropdown-item" href="service-5.html">переказ юаня у Китай</a></li>
-                        </ul>
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="global-information.html">Про нас</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="how-it-works.html">як це працює</a>
+                        <a class="nav-link" aria-current="page" href="services.html">Послуги</a>
+                    </li>
+                     <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="price.html">Ціни</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="contacts.html">де нас знайти</a>
+                        <a class="nav-link" aria-current="page" href="contacts.html">Контакти</a>
                     </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            клієнтам
-                         </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="reviews.html">відгуки</a></li>
-                            <li><a class="dropdown-item" href="faq.html">часті питання</a></li>
-                            <li><a class="dropdown-item" href="404.html">блог</a></li>
-                        </ul>
-                    </li>
+                 
                   
                 </ul>
 
                 <ul class="navbar-nav navbar-nav_language navbar-nav_small ms-xl-auto">
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            ua
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="index.html">ua</a></li>
-                            <li><a class="dropdown-item" href="index.html">pl</a></li>
-                            <li><a class="dropdown-item" href="index.html">en</a></li>
-                        </ul>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" role="button">ua</a>
                     </li>
                 </ul>
 
-                <div class="btn-row">
-                    <a href="sign-in.html" class="btn btn-secondary btn-registration">реєстрація</a>
-                    <a href="index.html" class="btn btn-primary btn-exit d-lg-none">вийти з акаунту</a>
-                </div>
+                <div class="dropdown mobile-menu">
+                    <button class="btn btn-secondary dropdown-toggle mobile-menu-toggle button-s" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Відкрити меню">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                       <ul class="dropdown-menu">
+                           <li class="nav-item">
+                            <a class="dropdown-item" href="services.html">Послуги</a>
+                        </li>
+                           <li class="nav-item">
+                            <a class="dropdown-item" href="global-information.html">Про нас</a></li>
+                              <li>
+                                <a class="dropdown-item" href="price.html">Ціни</a>
+                            </li>
+                            <li class="nav-item">
+                             <a class="dropdown-item" href="contacts.html">Відгуки</a>
+                             </li>
+                        </ul>
+</div>
+
+      
+                
+                
             </div>
 
-            <a href="#" class="btn btn-secondary btn-user verified">AE</a>
+          
         </div>
         </div>
     </nav>
 </header>
-

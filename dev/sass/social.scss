@@ -1,0 +1,26 @@
+.template-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.icon-social {
+    width: 95px;
+    height: 95px;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $background;
+}
+
+.social-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 200px;
+    margin-top: 35px;
+    align-items: center;
+}

@@ -1,4 +1,367 @@
 @media screen and (max-width: 1024px) {
+    h1,
+    .h1 {
+        font-size: 32px;
+    }
+
+    h2,
+    .h2 {
+        font-size: 32px;
+    }
+
+   h3,
+    .h3 {
+      font-size: 24px;
+    }
+
+    h5,
+    .h5 {
+        font-size: 18px;
+    }
+
+    h6,
+    .h6 {
+        font-size: 16px;
+    }
+
+    body .btn {
+    font-size: 18px;
+    padding: 18px 25px;
+
+    }
+
+    header.fixed + .wrapper {
+        padding-top: 70px;
+    }
+    
+
+    header {
+        .container {
+            padding: 30px 30px;
+
+        }
+
+        .navbar-brand {
+            margin-right: 0;
+            display: flex;
+        }
+
+        .logo {
+            height: 45px;
+            font-weight: 45px;
+            margin-left: -30px;
+        }
+
+        .brand-img {
+            width: 130px;
+            height: 41px;
+            margin-top: 13px;
+            margin-left: 5px;
+        }
+
+        .navbar-nav_language {
+            font-size: 16px;
+        }
+
+        .mobile-menu-toggle {
+            width: 60px;
+            height: 50px;
+            padding: 0;
+            border-radius: 10px;
+            background-color: $text;
+            opacity: calc(70%);
+            gap: 7px;
+        }
+
+        span {
+            width: 35px;
+            height: 2px;
+            display: block;
+            background-color: $background;
+        }
+
+        .navbar-nav_main-navigation {
+        display: none;
+    }
+
+    .navbar-nav_language {
+        display: flex;
+        margin-left: auto;
+        padding: 0 10px 0 0;
+    }
+
+    .navbar-nav_language .nav-link {
+        font-size: 16px;
+        padding: 0;
+    }
+
+
+    .mobile-menu {
+        display: block;
+        margin-left: auto;
+    }
+
+        .mobile-menu .dropdown-menu {
+            width: 100%;
+        }
+
+        .mobile-menu .dropdown-item {
+            font-size: 16px;
+        }
+
+         .mobile-menu .dropdown-menu {
+        position: fixed !important;
+        top: 65px !important;
+        left: 0 !important;
+        right: 0 !important;
+        width: 100vw;
+       // display: flex;
+        align-items: center;
+        min-width: 100vw;
+        border-radius: 0;
+        background-color: $background;
+        transform: none !important;
+    }
+
+    .mobile-menu .dropdown-item {
+        text-align: center;
+    }
+    }
+
+     body {
+        .container {
+        padding: 20px 20px;
+        margin-bottom: 100px;
+    }
+
+    .banner-text {
+        margin-top: 50px;
+    }
+    }
+
+    .banner {
+        margin-top: 10px;
+    }
+
+    .banner-title {
+        margin-top: 50px;
+        font-size: 32px;
+        margin-bottom: 24px;
+    }
+
+    .banner-phrase {
+        height: 360px;
+        padding: 40px;
+    }
+
+    .banner-subtitle {
+        font-size: 18px;
+        max-width: 324px;
+        margin-bottom: 10px;
+    }
+
+    .banner-phrase .banner-btn {
+        left: 30px;
+        right: 30px;
+        bottom: 30px;
+        border-radius: 50px;
+    }
+
+    .img-boy {
+        bottom: 100px;
+        right: -30px;
+    }
+
+    .template-title {
+        margin-bottom: 30px;
+        color: $text2;
+
+       &::after {
+            display: none;
+        }
+    }
+
+    .courses-list {
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+    }
+
+     .cousre-title {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+
+    .cousre-description {
+        font-size: 18px;
+    }
+
+    .register {
+        padding: 9px 20px;
+        width: 100%;
+    }
+
+    .information-title {
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+
+    .information-list {
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+    }
+
+    .information-description {
+        font-size: 18px;
+    }
+
+    .about-us-title {
+        font-size: 24px;
+        margin-bottom: 20px;
+        
+    }
+
+    form .special {
+        font-size: 16px;
+    }
+
+    .form-style {
+        background-color: $background;
+        border-radius: 30px;
+         border: 7px solid $text;
+         padding: 30px;
+          max-width: 534px;
+    }
+    .form-check {
+        font-size: 16px;
+    }
+
+    .social-nav {
+        gap: 30px;
+    }
+
+    .social-icon {
+        gap: 20px;
+    }
+
+    svg {
+        width: 50px;
+        height: 50px;
+    }
+
+    .icon-social {
+        width: 65px;
+        height: 65px;
+    }
+
+    .form-name {
+        font-size: 18px;
+    }
+
+    .choose {
+        flex-direction: column;
+    }
+
+    .infor-title {
+        font-size: 18px;
+
+        &::before {
+        position: absolute;
+        width: 153px;
+        height: 204px;
+        top: -150px;
+        left: 186px;
+        background: url(./assets/img/globalimage.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+        z-index: 10;
+        }
+    }
+
+    .infor-subtitle {
+        font-size: 18px;
+    }
+
+    .img-couple {
+        display: none;
+    }
+
+    .white {
+        margin-top: 200px;
+        padding: 15px;
+    }
+
+    .padd {
+        font-size: 18px;
+    }
+
+    .information-description {
+        margin-left: 12px;
+    }
+
+    .course-name {
+        font-size: 16px;
+    }
+
+
+    
+    footer {
+        .footer-logo {
+           margin-bottom: 20px;
+        }
+
+        .footer-nav {
+            gap: 15px;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 30px;
+        }
+
+        .footer-title {
+            font-size: 16px;
+        }
+
+        .column-sm {
+            margin-right: 30px;
+            margin-bottom: 40px;
+        }
+
+        .column-lg {
+            gap: 50px;
+            flex-direction: column;
+        }
+
+        .footer-link {
+            font-size: 18px;
+            gap: 15px;
+        }
+
+        svg {
+            width: 35px;
+        }
+
+        .footer-contact {
+            font-size: 16px;
+            display: flex;
+            align-items: center;
+        justify-content: start;
+        }
+
+        .icon-footer {
+            margin-right: 0;
+        }
+
+        .copyright-nav {
+            display: none;
+        }
+
+    }
 }
+
 
 
