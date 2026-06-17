@@ -602,34 +602,80 @@ form .police:focus, form .police:hover, form .police:checked, form .police:activ
   font-size: 20px;
   font-weight: 400;
   margin-right: 10px;
-  background-color: #F7FFEE;
+  background-color: #8C0004;
+  color: #F7FFEE;
   padding: 10px 15px;
+  display: flex;
+  align-items: center;
   border-radius: 30px;
 }
 
 .choose {
   display: flex;
-  gap: 45px;
+  gap: 25px;
   margin-top: 100px;
   margin-bottom: 100px;
 }
 
+.option-title,
+.selected {
+  position: relative;
+  cursor: pointer;
+}
+
 .option {
-  border-color: #1e0000;
   font-size: 16px;
-  background-color: transparent;
+  padding: 12px 20px;
+  border-radius: 10px;
+  background: #fff;
+  cursor: pointer;
+  position: relative;
 }
 
-select option:hover {
-  background-color: #1e0000;
+.dropdown-1 {
+  display: none;
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 0;
+  width: 100%;
+  background: #fff;
+  border-radius: 16px;
+  padding: 8px;
+  margin: 0;
+  list-style: none;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+  z-index: 1000;
 }
 
-option {
-  background-color: #8C0004;
+.option.active .dropdown-1 {
+  display: block;
+}
+
+.option.active .dropdown-1 {
+  display: block;
+}
+
+.disabled {
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+.dropdown-1 li {
+  padding: 14px 18px;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 18px;
+  line-height: 1.4;
+  transition: 0.2s;
+}
+
+.dropdown-1 li:hover {
+  background: #8C0004;
   color: #F7FFEE;
 }
-option:hover, option:focus {
-  background-color: #1e0000 !important;
+
+.dropdown-1 li.active {
+  background: #e8a735;
 }
 
 .first-choice {
@@ -870,6 +916,7 @@ footer .footer-contact {
   .template-title {
     margin-bottom: 30px;
     color: #080807;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 0 0 5px rgba(255, 255, 255, 0.9);
   }
   .template-title::after {
     display: none;

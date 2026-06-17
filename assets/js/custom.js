@@ -69,97 +69,205 @@ if (!privacyConsent) {
 });
 
 
+
+
+  
 // Форма для вибору інтенсивності і графіку 
-  document.addEventListener("DOMContentLoaded", function () {
-  const daysByIntensity = {
-    "twotimes": [
-      "Понеділок і середа",
-      "Вівторок і четвер",
-       "Середа і п'ятниця",
-      "Четвер і субота",
-       "П'ятниця і неділя"
-    ],
-    "threetimes": [
-     "Понеділок, середа, пʼятниця",
-      "Вівторок, четвер, субота",
-      "Середа, п'ятниця, неділя"
-    ]
-  };
+  document.addEventListener("DOMContentLoaded", () => {
 
-  const hoursByDays = {
-    "Понеділок і середа" : ["10:00-12:00", "14:00-16:00", "18:00-20:00", "20:00-22:00"],
-      "Вівторок і четвер": ["10:00-12:00", "14:00-16:00", "18:00-20:00", "20:00-22:00"],
-       "Середа і п'ятниця": ["10:00-12:00", "14:00-16:00", "18:00-20:00", "20:00-22:00"],
-      "Четвер і субота": ["10:00-12:00", "14:00-16:00", "18:00-20:00", "20:00-22:00"],
-       "П'ятниця і неділя": ["10:00-12:00", "14:00-16:00", "18:00-20:00", "20:00-22:00"], 
+    const daysByIntensity = {
+        twotimes: [
+            "Понеділок і середа",
+            "Вівторок і четвер",
+            "Середа і п'ятниця",
+            "Четвер і субота",
+            "П'ятниця і неділя"
+        ],
+        threetimes: [
+            "Понеділок, середа, пʼятниця",
+            "Вівторок, четвер, субота",
+            "Середа, п'ятниця, неділя"
+        ]
+    };
 
-    "Понеділок, середа, пʼятниця": ["10:00-12:00", "14:00-16:00", "18:00-20:00", "20:00-22:00"],
-      "Вівторок, четвер, субота": ["10:00-12:00", "14:00-16:00", "18:00-20:00", "20:00-22:00"],
-      "Середа, п'ятниця, неділя": ["10:00-12:00", "14:00-16:00", "18:00-20:00", "20:00-22:00"]
-  };
+    const hoursByDays = {
+        "Понеділок і середа": ["10:00-12:00", "14:00-16:00", "18:00-20:00", "20:00-22:00"],
+        "Вівторок і четвер": ["10:00-12:00", "14:00-16:00", "18:00-20:00", "20:00-22:00"],
+        "Середа і п'ятниця": ["10:00-12:00", "14:00-16:00", "18:00-20:00", "20:00-22:00"],
+        "Четвер і субота": ["10:00-12:00", "14:00-16:00", "18:00-20:00", "20:00-22:00"],
+        "П'ятниця і неділя": ["10:00-12:00", "14:00-16:00", "18:00-20:00", "20:00-22:00"],
 
-  const intensitySelect = document.querySelector("#intensity");
-  const daySelect = document.querySelector("#day");
-  const hourSelect = document.querySelector("#hour");
+        "Понеділок, середа, пʼятниця": ["10:00-12:00", "14:00-16:00", "18:00-20:00", "20:00-22:00"],
+        "Вівторок, четвер, субота": ["10:00-12:00", "14:00-16:00", "18:00-20:00", "20:00-22:00"],
+        "Середа, п'ятниця, неділя": ["10:00-12:00", "14:00-16:00", "18:00-20:00", "20:00-22:00"]
+    };
 
-  if (!intensitySelect || !daySelect || !hourSelect) {
-    return;
-  }
+    const intensity = document.getElementById("intensity");
+    const day = document.getElementById("day");
+    const hour = document.getElementById("hour");
 
-  function resetSelect(select, placeholder) {
-    select.innerHTML = "";
-    select.disabled = true;
+    // відкриття dropdown
+    document.querySelectorAll(".option").forEach(select => {
 
-    const option = document.createElement("option");
-    option.value = "";
-    option.textContent = placeholder;
-    select.appendChild(option);
-  }
+        const title = select.querySelector(".option-title, .selected");
 
-  function fillSelect(select, placeholder, options) {
-    select.innerHTML = "";
-    select.disabled = false;
+        title.addEventListener("click", (e) => {
 
-    const placeholderOption = document.createElement("option");
-    placeholderOption.value = "";
-    placeholderOption.textContent = placeholder;
-    select.appendChild(placeholderOption);
+            if (select.classList.contains("disabled")) return;
 
-    options.forEach(function (item) {
-      const option = document.createElement("option");
-      option.value = item;
-      option.textContent = item;
-      select.appendChild(option);
+            document.querySelectorAll(".option").forEach(item => {
+                if (item !== select) {
+                    item.classList.remove("active");
+                }
+            });
+
+            select.classList.toggle("active");
+            e.stopPropagation();
+        });
     });
-  }
 
-  resetSelect(daySelect, "Спочатку оберіть інтенсивність");
-  resetSelect(hourSelect, "Спочатку оберіть дні");
+    document.addEventListener("click", () => {
+        document.querySelectorAll(".option").forEach(select => {
+            select.classList.remove("active");
+        });
+    });
 
-  intensitySelect.addEventListener("change", function () {
-    const selectedIntensity = intensitySelect.value;
-    const dayOptions = daysByIntensity[selectedIntensity] || [];
+    // вибір інтенсивності
+    intensity.querySelectorAll("li").forEach(item => {
 
-    resetSelect(hourSelect, "Спочатку оберіть дні");
+        item.addEventListener("click", () => {
 
-    if (!dayOptions.length) {
-      resetSelect(daySelect, "Спочатку оберіть інтенсивність");
-      return;
-    }
+            const value = item.dataset.value;
 
-    fillSelect(daySelect, "Оберіть дні", dayOptions);
-  });
+            intensity.querySelector(".option-title").textContent =
+                item.textContent;
 
-  daySelect.addEventListener("change", function () {
-    const selectedDays = daySelect.value;
-    const hourOptions = hoursByDays[selectedDays] || [];
+            intensity.classList.remove("active");
 
-    if (!hourOptions.length) {
-      resetSelect(hourSelect, "Спочатку оберіть дні");
-      return;
-    }
+            day.classList.remove("disabled");
 
-    fillSelect(hourSelect, "Оберіть годину", hourOptions);
-  });
+            day.querySelector(".selected").textContent =
+                "Оберіть дні проведення занять";
+
+            day.querySelector(".dropdown-1").innerHTML = "";
+
+            hour.querySelector(".selected").textContent =
+                "Спочатку оберіть дні";
+
+            hour.querySelector(".dropdown-1").innerHTML = "";
+
+            hour.classList.add("disabled");
+
+            daysByIntensity[value].forEach(dayName => {
+
+                const li = document.createElement("li");
+
+                li.textContent = dayName;
+                li.classList.add("options");
+
+                li.addEventListener("click", () => {
+
+                    day.querySelector(".selected").textContent =
+                        dayName;
+
+                    day.classList.remove("active");
+
+                    hour.classList.remove("disabled");
+
+                    hour.querySelector(".selected").textContent =
+                        "Оберіть годину";
+
+                    hour.querySelector(".dropdown-1").innerHTML = "";
+
+                    hoursByDays[dayName].forEach(hourValue => {
+
+                        const hourLi = document.createElement("li");
+
+                        hourLi.textContent = hourValue;
+                        hourLi.classList.add("options");
+
+                        hourLi.addEventListener("click", () => {
+
+                            hour.querySelector(".selected").textContent =
+                                hourValue;
+
+                            hour.classList.remove("active");
+                        });
+
+                        hour.querySelector(".dropdown-1")
+                            .appendChild(hourLi);
+                    });
+                });
+
+                day.querySelector(".dropdown-1")
+                    .appendChild(li);
+            });
+        });
+    });
 
 });
+
+ // const intensitySelect = document.querySelector("#intensity");
+ // const daySelect = document.querySelector("#day");
+ // const hourSelect = document.querySelector("#hour");
+
+ // if (!intensitySelect || !daySelect || !hourSelect) {
+ //   return;
+ // }
+
+ // function resetSelect(select, placeholder) {
+ //   select.innerHTML = "";
+ //   select.disabled = true;
+
+   // const option = document.createElement("option");
+   // option.value = "";
+   // option.textContent = placeholder;
+   // select.appendChild(option);
+ // }
+
+ // function fillSelect(select, placeholder, options) {
+  //  select.innerHTML = "";
+  ///  select.disabled = false;
+
+   // const placeholderOption = document.createElement("option");
+   // placeholderOption.value = "";
+   // placeholderOption.textContent = placeholder;
+   // select.appendChild(placeholderOption);
+
+   // options.forEach(function (item) {
+    //  const option = document.createElement("option");
+    //  option.value = item;
+    //  option.textContent = item;
+    //  select.appendChild(option);
+   // });
+ // }
+
+ // resetSelect(daySelect, "Спочатку оберіть інтенсивність");
+ // resetSelect(hourSelect, "Спочатку оберіть дні");
+
+ // intensitySelect.addEventListener("change", function () {
+  //  const selectedIntensity = intensitySelect.value;
+  //  const dayOptions = daysByIntensity[selectedIntensity] || [];
+
+  //  resetSelect(hourSelect, "Спочатку оберіть дні");
+
+   // if (!dayOptions.length) {
+    //  resetSelect(daySelect, "Спочатку оберіть інтенсивність");
+     // return;
+    //}
+
+   // fillSelect(daySelect, "Оберіть дні", dayOptions);
+  //});
+
+  //daySelect.addEventListener("change", function () {
+    //const selectedDays = daySelect.value;
+    //const hourOptions = hoursByDays[selectedDays] || [];
+
+    //if (!hourOptions.length) {
+     // resetSelect(hourSelect, "Спочатку оберіть дні");
+     // return;
+   // }
+
+    //fillSelect(hourSelect, "Оберіть годину", hourOptions);
+ // });
+

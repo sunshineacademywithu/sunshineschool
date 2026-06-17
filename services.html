@@ -52,16 +52,16 @@
                     </button>
                     <ul class="dropdown-menu">
                         <li class="nav-item">
-                            <a class="dropdown-item" href="services.html">Послуги</a>
+                            <a class="dropdown-item" href="services.html">Про нас</a>
                         </li>
                         <li class="nav-item">
-                            <a class="dropdown-item" href="global-information.html">Про нас</a>
+                            <a class="dropdown-item" href="global-information.html">Послуги</a>
                         </li>
                         <li>
                             <a class="dropdown-item" href="price.html">Ціни</a>
                         </li>
                         <li class="nav-item">
-                            <a class="dropdown-item" href="contacts.html">Відгуки</a>
+                            <a class="dropdown-item" href="contacts.html">Контакти</a>
                         </li>
                     </ul>
                 </div>
@@ -92,23 +92,34 @@
                     <h6 class="cousre-description">Заняття розпочинаються після повного набору групи. Графік залежить від вибору інтенсивності (2 або 3 зустрічі на тиждень).</h6>
                 </div>
             </div>
-            <form class="choose">
-                <label for="intensity" class="form-name">Групові заняття</label>
-                <select id="intensity" name="intensity" class="option">
-                    <option value="" class="options">Оберіть інтенсивність</option>
-                    <option value="twotimes" class="options">2 зустрічі на тиждень</option>
-                    <option value="threetimes" class="options">3 зустрічі на тиждень</option>
-                </select>
 
-                <label for="day" class="form-name">Доступні дні</label>
-                <select id="day" name="day" class="option" disabled>
-                    <option value="" class="options">Спочатку оберіть формат</option>
-                </select>
-                <label for="hour" class="form-name">Доступні години</label>
-                <select id="hour" name="hour" class="option" disabled>
-                    <option value="" class="options">Спочатку оберіть формат</option>
-                </select>
-            </form>
+            <div class="choose">
+                <label class="form-name">Групові заняття</label>
+                <div class="option" id="intensity">
+                    <div class="option-title">Оберіть інтенсивність</div>
+                    <ul class="dropdown-1">
+                        <li data-value="twotimes" class="options">2 зустрічі на тиждень</li>
+                        <li data-value="threetimes" class="options">3 зустрічі на тиждень</li>
+                    </ul>
+                </div>
+
+                <label class="form-name">Доступні дні</label>
+                <div class="option disabled" id="day">
+                    <div class="selected">Спочатку оберіть інтенсивність</div>
+                    <ul class="dropdown-1">
+
+                    </ul>
+
+                </div>
+                <label class="form-name">Доступні години</label>
+                <div class="option disabled" id="hour">
+                    <div class="selected">Спочатку оберіть години</div>
+                    <ul class="dropdown-1">
+
+                    </ul>
+                </div>
+            </div>
+
 
             <form class="d-none d-lg-block form">
                 <div class="row justify-content-center">
