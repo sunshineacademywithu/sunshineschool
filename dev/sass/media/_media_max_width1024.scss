@@ -175,6 +175,9 @@
     .template-title {
         margin-bottom: 30px;
         color: $text2;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 
+               0 0 5px rgba(255, 255, 255, 0.9);
+
 
        &::after {
             display: none;

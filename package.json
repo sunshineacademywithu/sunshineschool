@@ -1,4 +1,7 @@
 {
+  "scripts": {
+    "deploy": "gh-pages -d build"
+  },
   "dependencies": {
     "browser-sync": "^3.0.4",
     "css-mqpacker": "^7.0.0",
@@ -25,6 +28,8 @@
     "merge-stream": "^2.0.0",
     "sass": "^1.57.1",
     "vinyl-buffer": "^1.0.1"
-    
+  },
+  "devDependencies": {
+    "gh-pages": "^6.3.0"
   }
 }

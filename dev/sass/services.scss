@@ -7,40 +7,84 @@
     font-size: 20px;
     font-weight: 400;
     margin-right: 10px;
-    background-color: $text;
+    background-color: $background;
+    color: $text;
     padding: 10px 15px;
+    display: flex;
+    align-items: center;
     border-radius: 30px;
 }
 
 .choose {
     display: flex;
-    gap: 45px;
+    gap: 25px;
     margin-top: 100px;
     margin-bottom: 100px;
 }
 
+.option-title, 
+.selected {
+    position: relative;
+    cursor: pointer;
+}
+
 .option {
-    border-color: $check;
     font-size: 16px;
-    background-color: transparent;
+    padding: 12px 20px;
+    border-radius: 10px;
+    background: #fff;
+    cursor: pointer;
+      position: relative;
+}   
 
+.dropdown-1 {
+    display: none;
+    position: absolute;
+    top: calc(100% + 8px);
+    left: 0;
+    width: 100%;
+    background: #fff;
+    border-radius: 16px;
+    padding: 8px;
+    margin: 0;
+    list-style: none;
+    box-shadow: 0 10px 25px rgba(0,0,0,.12);
+    z-index: 1000;
 }
 
-select option {
-    &:hover {
- background-color: $check;
-    }
-   
 
+
+.option.active .dropdown-1 {
+    display: block;
 }
 
-option {
-    background-color: $background;
+.option.active .dropdown-1 {
+    display: block;
+}
+
+.disabled {
+    opacity: .6;
+    pointer-events: none;
+}
+
+.dropdown-1 li {
+    padding: 14px 18px;
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 18px;
+    line-height: 1.4;
+    transition: .2s;
+}
+
+.dropdown-1 li:hover {
+    background: $background;
     color: $text;
-     &:hover, &:focus {
-background-color: $check !important; 
-   }
 }
+
+.dropdown-1 li.active {
+    background: $hover;
+}
+
 
 
 
