@@ -481,6 +481,13 @@ form .police:focus, form .police:hover, form .police:checked, form .police:activ
   background-color: #e8a735;
 }
 
+.modal {
+  display: none;
+  padding: 20px;
+  background: #8C0004;
+  border-radius: 30px;
+}
+
 .accordion-item {
   background-color: #b6452c;
   border-color: #e94f08;
@@ -706,6 +713,32 @@ form .police:focus, form .police:hover, form .police:checked, form .police:activ
 
 .choice {
   margin-top: 40px;
+}
+
+.listof {
+  list-style: disc;
+  margin-left: 20px;
+}
+
+.link {
+  color: #8C0004;
+}
+
+.font {
+  font-size: 18px;
+}
+
+.police-title {
+  font-weight: 500;
+  font-size: 20px;
+}
+
+.marginnn {
+  margin-left: 40px;
+}
+
+.starl {
+  margin-bottom: 40px;
 }
 
 footer {
