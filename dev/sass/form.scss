@@ -15,7 +15,7 @@
 
         .form-style-2 {
             margin-left: 50px;
-            max-height: 370px;
+            max-height: 440px;
         }
        
         
@@ -123,3 +123,9 @@
                 background-color: $hover;
             }
         }
+.modal {
+    display: none;
+    padding: 20px;
+    background: $background;
+    border-radius: 30px;
+}
