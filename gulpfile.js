@@ -199,7 +199,7 @@ gulp.task('copy-css', function() {
 gulp.task('copyRootXML', function() {
     return gulp.src(dirs.source + '/*.xml')
     .pipe(gulp.dest(dirs.build + '/'));
-})
+});
 
 // ЗАДАЧА: Сборка всего
 gulp.task('build', gulp.series( // последовательно:
