@@ -196,13 +196,18 @@ gulp.task('copy-css', function() {
     .pipe(gulp.dest('build' + '/assets/css'));
 });
 
+gulp.task('copyRootXML', function() {
+    return gulp.src(dirs.source + '/*.xml') 
+    .pipe(gulp.dest(dirs.build + '/'));
+});
+
 
 
 // ЗАДАЧА: Сборка всего
 gulp.task('build', gulp.series( // последовательно:
     'clean', // последовательно: очистку папки сборки
     'svgstore',
-    gulp.parallel('sass', 'img', 'images', 'imguploads', 'copyFonts', 'copyCSS', 'copyJS'),
+    gulp.parallel('sass', 'img', 'images', 'imguploads', 'copyFonts', 'copyCSS', 'copyJS', 'copyRootXML'),
     'html',
     'php'
     // последовательно: сборку разметки
@@ -277,6 +282,11 @@ gulp.task('serve', gulp.series('build', function() {
     gulp.watch( // следим за JS
         dirs.source + '/assets/js/*.js',
         gulp.series('copyJS', reloader) // при изменении пересобираем и обновляем в браузере
+    );
+
+    gulp.watch( // следим за XML в корне
+        dirs.source + '/*.xml',
+        gulp.series('copyRootXML', reloader)
     );
 
 }));
