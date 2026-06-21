@@ -10,7 +10,7 @@
     <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css" />
     <link rel="stylesheet" type="text/css" href="style.css" />
    
-    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
 <link rel="stylesheet" id="silktide-consent-manager-css" href="https://cdn.jsdelivr.net/gh/silktide/consent-manager@v2.0.0/silktide-consent-manager.css" integrity="sha384-IO1E/jCrQXyH5rwcI0SXP7OXw47JFqQNDQcKhbFvqnL2IunBxxwE2Ne5XyAmCqKs" crossorigin="anonymous">
 <style id="silktide-consent-manager-overrides">
 #stcm-wrapper {
@@ -18,7 +18,7 @@
   --fontFamily: Helvetica Neue, Segoe UI, Arial, sans-serif;
   --primaryColor: #8C0004;
   --backgroundColor: #ffffff;
-  --textColor: #000000;
+  --textColor: #4b494b;
   --backdropBackgroundColor: #00000033;
   --backdropBackgroundBlur: 0px;
   --iconColor: #8c0004;
@@ -40,16 +40,16 @@ window.silktideConsentManager.init({
   consentTypes: [
     {
       id: "",
-      label: "Необхідні ",
-      description: "<p>Ці файли cookie необхідні для належного функціонування веб-сайту, і їх неможливо вимкнути. Вони допомагають, зокрема, у вході в систему та налаштуванні ваших параметрів конфіденційності. Детальніше читайте&nbsp; у нашій&nbsp;<a href=\"https://sunshineacademywithu.github.io/sunshineschool/policy.html\" target=\"_blank\">Політиці конфіденційності</a>.</p>",
+      label: "Необхідні",
+      description: "<p>Ці файли cookie необхідні для належного функціонування веб-сайту, і їх неможливо вимкнути. Вони допомагають, зокрема, у вході в систему та налаштуванні ваших параметрів конфіденційності.</p>",
       required: true,
       onAccept: function() {
-        console.log('Add logic for the required Необхідні  consent type here');
+        console.log('Add logic for the required Необхідні consent type here');
       }
     },
     {
       id: "",
-      label: "Аналітика",
+      label: "Аналітика ",
       description: "<p>Ці файли cookie допомагають нам вдосконалювати сайт, відстежуючи, які сторінки користуються найбільшою популярністю та як відвідувачі переміщуються по сайту.</p>",
       required: false,
       gtag: "analytics_storage"
@@ -68,25 +68,26 @@ window.silktideConsentManager.init({
   ],
   text: {
     prompt: {
-      description: "<p>На нашому сайті ми використовуємо файли cookie, щоб покращити ваш користувацький досвід, надавати персоналізований контент та аналізувати відвідуваність сайту.</p>",
-      acceptAllButtonText: "Прийняти всі",
+      description: "<p>На нашому сайті ми використовуємо файли cookie, щоб покращити ваш користувацький досвід, надавати персоналізований контент та аналізувати відвідуваність сайту. Детальніше читайте у нашій&nbsp;<a href=\"https://sunshineacademywithu.github.io/sunshineschool/policy.html\" target=\"_blank\">Політиці конфіденційності.</a></p>",
+      acceptAllButtonText: "Прийняти все",
       acceptAllButtonAccessibleLabel: "Accept all cookies",
-      rejectNonEssentialButtonText: "Відхилити всі",
+      rejectNonEssentialButtonText: "Відхилити все",
       rejectNonEssentialButtonAccessibleLabel: "Reject all non-essential cookies",
       preferencesButtonText: "Більше",
       preferencesButtonAccessibleLabel: "Toggle preferences"
     },
     preferences: {
-      title: "Налаштувати файли cookie",
+      title: "Налаштуйте свої файли cookie",
       description: "<p>Ми поважаємо ваше право на конфіденційність. Ви можете відмовитися від використання певних типів файлів cookie. Ваші налаштування щодо файлів cookie будуть застосовуватися на всьому нашому веб-сайті.</p>",
-      saveButtonText: "Зберегти налаштування",
+      saveButtonText: "Зберегти та вийти",
       saveButtonAccessibleLabel: "Save your cookie preferences",
-      creditLinkText: "",
-      creditLinkAccessibleLabel: ""
+      creditLinkText: "Get this banner for free",
+      creditLinkAccessibleLabel: "Get this banner for free"
     }
   }
 });
 </script>
+
 
 
 </head>
