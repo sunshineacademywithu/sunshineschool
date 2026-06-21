@@ -9,7 +9,8 @@
     <link href="https://cdn.jsdelivr.net/npm/reset-css@5.0.2/reset.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css" />
     <link rel="stylesheet" type="text/css" href="style.css" />
-   <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+   
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
 <link rel="stylesheet" id="silktide-consent-manager-css" href="https://cdn.jsdelivr.net/gh/silktide/consent-manager@v2.0.0/silktide-consent-manager.css" integrity="sha384-IO1E/jCrQXyH5rwcI0SXP7OXw47JFqQNDQcKhbFvqnL2IunBxxwE2Ne5XyAmCqKs" crossorigin="anonymous">
 <style id="silktide-consent-manager-overrides">
 #stcm-wrapper {
@@ -40,7 +41,7 @@ window.silktideConsentManager.init({
     {
       id: "",
       label: "Необхідні ",
-      description: "<p>Ці файли cookies є необхідними для належної роботи сайту, і їх не можна вимкнути. Вони допомагають налаштувати параметри конфіденційності.</p>",
+      description: "<p>Ці файли cookie необхідні для належного функціонування веб-сайту, і їх неможливо вимкнути. Вони допомагають, зокрема, у вході в систему та налаштуванні ваших параметрів конфіденційності. Детальніше читайте&nbsp; у нашій&nbsp;<a href=\"https://sunshineacademywithu.github.io/sunshineschool/policy.html\" target=\"_blank\">Політиці конфіденційності</a>.</p>",
       required: true,
       onAccept: function() {
         console.log('Add logic for the required Необхідні  consent type here');
@@ -55,7 +56,7 @@ window.silktideConsentManager.init({
     },
     {
       id: "",
-      label: "Маркентинг",
+      label: "Маркетинг",
       description: "<p>Ці файли cookie використовуються нами та нашими рекламними партнерами для показу вам релевантних рекламних оголошень на цьому сайті та в інших місцях, а також для оцінки ефективності цих рекламних кампаній.</p>",
       required: false,
       gtag: [
@@ -69,23 +70,24 @@ window.silktideConsentManager.init({
     prompt: {
       description: "<p>На нашому сайті ми використовуємо файли cookie, щоб покращити ваш користувацький досвід, надавати персоналізований контент та аналізувати відвідуваність сайту.</p>",
       acceptAllButtonText: "Прийняти всі",
-      acceptAllButtonAccessibleLabel: "Прийняти всі",
-      rejectNonEssentialButtonText: "Відхилити всі необов’язкові файли cookie",
-      rejectNonEssentialButtonAccessibleLabel: "Відхилити всі необов’язкові файли cookie",
-      preferencesButtonText: "Налаштування",
-      preferencesButtonAccessibleLabel: "Налаштування"
+      acceptAllButtonAccessibleLabel: "Accept all cookies",
+      rejectNonEssentialButtonText: "Відхилити всі",
+      rejectNonEssentialButtonAccessibleLabel: "Reject all non-essential cookies",
+      preferencesButtonText: "Більше",
+      preferencesButtonAccessibleLabel: "Toggle preferences"
     },
     preferences: {
-      title: "Налаштуйте параметри використання файлів cookie",
+      title: "Налаштувати файли cookie",
       description: "<p>Ми поважаємо ваше право на конфіденційність. Ви можете відмовитися від використання певних типів файлів cookie. Ваші налаштування щодо файлів cookie будуть застосовуватися на всьому нашому веб-сайті.</p>",
-      saveButtonText: "Зберегти та закрити",
+      saveButtonText: "Зберегти налаштування",
       saveButtonAccessibleLabel: "Save your cookie preferences",
-      creditLinkText: "Get this banner for free",
-      creditLinkAccessibleLabel: "Get this banner for free"
+      creditLinkText: "",
+      creditLinkAccessibleLabel: ""
     }
   }
 });
 </script>
+
 
 </head>
 <body>
