@@ -52,21 +52,24 @@ body {
     .wrapper.information,
     .wrapper.service,
     .wrapper.price,
-    .wrapper.contacts {
+    .wrapper.contacts,
+    .wrapper.forms {
         min-height: 0;
     }
 
     .wrapper.information .container,
     .wrapper.service .container,
     .wrapper.price .container,
-    .wrapper.contacts .container {
+    .wrapper.contacts .container,
+    .wrapper.forms .container {
         margin-bottom: 200px;
     }
 
     .wrapper.information::before,
     .wrapper.service::before,
     .wrapper.price::before,
-    .wrapper.contacts::before {
+    .wrapper.contacts::before,
+    .wrapper.forms::before {
         background-position: center top;
     }
 .container {
