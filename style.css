@@ -90,19 +90,22 @@ body .wrapper > * {
 body .wrapper.information,
 body .wrapper.service,
 body .wrapper.price,
-body .wrapper.contacts {
+body .wrapper.contacts,
+body .wrapper.forms {
   min-height: 0;
 }
 body .wrapper.information .container,
 body .wrapper.service .container,
 body .wrapper.price .container,
-body .wrapper.contacts .container {
+body .wrapper.contacts .container,
+body .wrapper.forms .container {
   margin-bottom: 200px;
 }
 body .wrapper.information::before,
 body .wrapper.service::before,
 body .wrapper.price::before,
-body .wrapper.contacts::before {
+body .wrapper.contacts::before,
+body .wrapper.forms::before {
   background-position: center top;
 }
 body .container {
