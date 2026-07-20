@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="theme-color" content="#188de7">
+    <link rel="shorcut icon" type="image/png" href="assets/img/mooooon.svg">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" />
+    <title>Sunshine</title>
+    <link href="https://cdn.jsdelivr.net/npm/reset-css@5.0.2/reset.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+    <link rel="stylesheet" id="silktide-consent-manager-css" href="https://cdn.jsdelivr.net/gh/silktide/consent-manager@v2.0.0/silktide-consent-manager.css" integrity="sha384-IO1E/jCrQXyH5rwcI0SXP7OXw47JFqQNDQcKhbFvqnL2IunBxxwE2Ne5XyAmCqKs" crossorigin="anonymous">
+    <style id="silktide-consent-manager-overrides">
+    #stcm-wrapper {
+        --boxShadow: -5px 5px 10px 0px #00000012, 0px 0px 50px 0px #0000001a;
+        --fontFamily: Helvetica Neue, Segoe UI, Arial, sans-serif;
+        --primaryColor: #8C0004;
+        --backgroundColor: #ffffff;
+        --textColor: #4b494b;
+        --backdropBackgroundColor: #00000033;
+        --backdropBackgroundBlur: 0px;
+        --iconColor: #8c0004;
+        --iconBackgroundColor: #ffffff;
+    }
+
+    </style>
+    <script src="https://cdn.jsdelivr.net/gh/silktide/consent-manager@v2.0.0/silktide-consent-manager.js" integrity="sha384-j4NIMOecmtzMWe9GJADIIe5hTlHG63aiTQ/2XorW10RNyQJg+IU+xwFVDy45wBah" crossorigin="anonymous"></script>
+    <script>
+    window.silktideConsentManager.init({
+        backdrop: {
+            show: true
+        },
+        icon: {
+            position: "bottomLeft"
+        },
+        prompt: {
+            position: "bottomRight"
+        },
+        consentTypes: [{
+                id: "",
+                label: "Необхідні",
+                description: "<p>Ці файли cookie необхідні для належного функціонування веб-сайту, і їх неможливо вимкнути. Вони допомагають, зокрема, у вході в систему та налаштуванні ваших параметрів конфіденційності.</p>",
+                required: true,
+                onAccept: function() {
+                    console.log('Add logic for the required Необхідні consent type here');
+                }
+            },
+            {
+                id: "",
+                label: "Аналітика ",
+                description: "<p>Ці файли cookie допомагають нам вдосконалювати сайт, відстежуючи, які сторінки користуються найбільшою популярністю та як відвідувачі переміщуються по сайту.</p>",
+                required: false,
+                gtag: "analytics_storage"
+            },
+            {
+                id: "",
+                label: "Маркетинг",
+                description: "<p>Ці файли cookie використовуються нами та нашими рекламними партнерами для показу вам релевантних рекламних оголошень на цьому сайті та в інших місцях, а також для оцінки ефективності цих рекламних кампаній.</p>",
+                required: false,
+                gtag: [
+                    "ad_storage",
+                    "ad_user_data",
+                    "ad_personalization"
+                ]
+            }
+        ],
+        text: {
+            prompt: {
+                description: "<p>На нашому сайті ми використовуємо файли cookie, щоб покращити ваш користувацький досвід, надавати персоналізований контент та аналізувати відвідуваність сайту. Детальніше читайте у нашій&nbsp;<a href=\"https://sunshineacademywithu.github.io/sunshineschool/policy.html\" target=\"_blank\">Політиці конфіденційності.</a></p>",
+                acceptAllButtonText: "Прийняти все",
+                acceptAllButtonAccessibleLabel: "Accept all cookies",
+                rejectNonEssentialButtonText: "Відхилити все",
+                rejectNonEssentialButtonAccessibleLabel: "Reject all non-essential cookies",
+                preferencesButtonText: "Більше",
+                preferencesButtonAccessibleLabel: "Toggle preferences"
+            },
+            preferences: {
+                title: "Налаштуйте свої файли cookie",
+                description: "<p>Ми поважаємо ваше право на конфіденційність. Ви можете відмовитися від використання певних типів файлів cookie. Ваші налаштування щодо файлів cookie будуть застосовуватися на всьому нашому веб-сайті.</p>",
+                saveButtonText: "Зберегти та вийти",
+                saveButtonAccessibleLabel: "Save your cookie preferences",
+                creditLinkText: "Get this banner for free",
+                creditLinkAccessibleLabel: "Get this banner for free"
+            }
+        }
+    });
+    </script>
+
+
+
+</head>
+
+<body>
+    <header class="global fixed">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">
+                <img src="assets/img/mooooon.svg" alt="logo" class="logo">
+                    <img src="assets/img/brand.svg" class="brand-img" alt="sitename">
+            </a>
+                <ul class="navbar-nav navbar-nav_main-navigation">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="global-information.html">Про нас</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="services.html">Послуги</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="price.html">Ціни</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="contacts.html">Контакти</a>
+                    </li>
+
+
+                </ul>
+
+                <ul class="navbar-nav navbar-nav_language navbar-nav_small ms-xl-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" role="button">ua</a>
+                    </li>
+                </ul>
+
+                <div class="dropdown mobile-menu">
+                    <button class="btn btn-secondary dropdown-toggle mobile-menu-toggle button-s" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Відкрити меню">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li class="nav-item">
+                            <a class="dropdown-item" href="services.html">Про нас</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="dropdown-item" href="global-information.html">Послуги</a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="price.html">Ціни</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="dropdown-item" href="contacts.html">Контакти</a>
+                        </li>
+                    </ul>
+                </div>
+
+
+
+
+            </div>
+
+
+            </div>
+            </div>
+        </nav>
+    </header>
+
+    <section class="public-ofert wrapper">
+        <div class="container white">
+            <h2 class="mb-4">Договір публічної оферти про надання освітніх послуг</h2>
+            <p class="font">Цей договір Публічної оферти про надання освітніх послуг укладається з метою врегулювання питань надання освітніх послуг з вивчення англійської мови (далі — «Послуги») та є публічною офертою (пропозицією) відповідального Виконавця надання освітніх послуг (фізичної-особи підприємця Коломієць Дарини Іванівни), адресованою необмеженому колу фізичних осіб (далі — «Замовник»), щоб укласти договір на викладених нижче умовах:</p>
+
+            <h5 class="police-title">1. Загальні положення</h5>
+            <ul>
+                <li class="font listof mb-4">1.1 Відносини між відповідальним Виконавцем та Замовником регулюються цим договором.</li>
+                <li class="font listof mb-4">1.2 Цей договір відповідно до ст. 633, 641, Цивільного кодексу України є публічним договором (офертою), умови якого однакові для всіх споживачів.</li>
+                <li class="font listof mb-4">1.3 Акцептом цього Договору є здійснення Замовником повної або часткової оплати послуг Виконавця. Акцепт означає повне і беззастережне прийняття Замовником усіх умов Договору без будь-яких винятків чи обмежень.</li>
+
+            </ul>
+
+            <h5 class="police-title">2. Предмет договору</h5>
+            <ul>
+                <li class="font listof mb-4">2.1 Виконавець зобов'язується надати Замовнику освітні послуги (навчання, консультації), а Замовник — оплатити ці послуги відповідно до обраного тарифу.</li>
+                <li class="font listof mb-4">2.2 Послуги надаються Виконавцем у рамках курсу, обраного Замовником у дистанційному форматі за допомогою платформи Google Meet.</li>
+                <li class="font listof mb-4">2.3 До початку надання Послуг за Договором Сторони зобов'язуються спільно погодити графік та розклад занять. Загальна тривалість кожного окремого курсу може бути змінена за взаємною згодою Сторін шляхом укладення Додаткової угоди до цього Договору.</li>
+                <li class="font listof mb-4">2.4 послуги надаються в групі або індивідуально з урахуванням замовлення Замовника.</li>
+            </ul>
+
+            <h5 class="police-title">3. Порядок надання послуг та відповідальність сторін</h5>
+            <ul>
+                <li class="font listof mb-4">3.1 Виконавець забезпечує надання послуг згідно з навчальним планом.</li>
+                <li class="font listof mb-4">3.2 Виконавець не несе відповідальності за якість інтернет-з'єднання на стороні Замовника.</li>
+                <li class="font listof mb-4">3.3 Замовник зобов'язується не поширювати навчальні матеріали, відеозаписи занять та не передавати доступ до уроків третім особам. У разі порушення цього пункту Виконавець має право розірвати Договір в односторонньому порядку без повернення коштів.</li>
+            </ul>
+
+
+            <h5 class="police-title">4. Права Сторін</h5>
+            <ul>
+                <li class="font listof mb-4">4.1 Виконавець має право:</li>
+                <li class="font listof mb-4">4.1.1 Складати навчальний план або коригувати йогов чатсині зімни обсягу програми, порядку її вичення в межах, що використовуються в процесі навчання та надання Послуг.</li>
+                <li class="font listof mb-4">4.1.2 Здійснювати попереднє тестування Замовника, а також періодичні атестації знань, отриманих у період навчання за обраною прогрмаою.</li>
+                <li class="font listof mb-4">4.1.3 Встановлювати графік відвідування Замовника та розклад за обраним курсом, а також змінювати графік відвідування Замовником та розклад занять за попередньою домовленістю обох Сторін у разі неможливості проведення занять за графіком.</li>
+                <li class="font listof mb-4">4.1.4 Здійснювати заміну викладача протягом строку дії цього Договору на спеціаліста аналогічної кваліфікації у разі неможливості подальшого надання Послуг із залученням викладача, що попередньо проводив заняття.</li>
+                <li class="font listof mb-4">4.1.5 Здійснювати інші права, передбачені чинним законодавством України.</li>
+                <li class="font listof mb-4">4.2 Замовник має право:</li>
+                <li class="font listof mb-4">4.2.1 Отримувати Послуги вчасно та якісно.</li>
+                <li class="font listof mb-4">4.2.2 Отримувати від Виконавця вчасно повну інформацію про організацію і виконання Послуг.</li>
+                <li class="font listof mb-4">4.2.3 Пройти безкоштовне попереднє тестування для визначення рівня своїх знань.</li>
+                <li class="font listof mb-4">4.2.4 Здійснювати інші права, передбачені чинним законодавством України.</li>
+                <li class="font listof mb-4">4.2.5 Перенести або скасувати заняття без втрати оплати, попередивши Винонавця не менше ніж за 24 години до початку. У разі несвоєчасного попередження зянятт вважається наданим у повному обсязі, а кошти за нього не повертаються.</li>
+
+
+
+            </ul>
+
+
+            <h5 class="police-title">5. Обов'язки Сторін</h5>
+            <ul>
+                <li class="font listof mb-4">5.1 Виконавець зобов'язаний:</li>
+                <li class="font listof mb-4">5.1.1 Створити належні умови для надання послуг: вчасно надати інформацію Замовнику стосовно організації та проведення занять в рамках надання освітніх послуг; надати посилання на платформу для проведення заняття.</li>
+                <li class="font listof mb-4">5.1.2 Ознайомити Замовника з Правилами та умовами навчання.</li>
+                <li class="font listof mb-4">5.2 Замовник зобов'язаний:</li>
+                <li class="font listof mb-4">5.2.1 Прийняти та вчасно оплатити Послуги згідно з умовами розділу 6 «Вартість послуг та порядок оплати» цього Договору.</li>
+                <li class="font listof mb-4">5.2.2 Вчасно попереджувати Виконавця про пропуск занять.</li>
+                <li class="font listof mb-4">5.2.3 Дотримуватись Правил та умов навчання.</li>
+
+
+
+            </ul>
+
+
+
+            <h5 class="police-title">6. Вартість послуг та порядок оплати</h5>
+            <ul>
+                <li class="font listof mb-4">6.1 Ціна послуг вказується на сайті або в індивідуальному рахунку. Усі витрати, пов'язані із перерахуванням грошових коштів за надані послуги за цим Договором сплачується Замовником.</li>
+                <li class="font listof mb-4">6.2 Розрахунки здійснюються у гривні шляхом безготівкового переказу на розрахунковий рахунок Виконавця за реквізитами ІВАН.</li>
+                <li class="font listof mb-4">6.3 Оплата вважається здійсненою з моменту зарахування коштів на рахунок Виконавця.</li>
+                <li class="font listof mb-4">6.4 У випадку пропуску Замовником узгоджених занять під час яких Виконавцем забезпечено надання Послуг, не залежно від причин пропуску сплачені кошти Замовнику не повертаються.</li>
+                <li class="font listof mb-4">6.5 Послуги надаються на умовах 100% передоплати, якщо інше не було узгоджено Сторонами у письмовому вигляду (включаючи листування в месенджері/електронній пошті)</li>
+
+            </ul>
+
+
+            <h5 class="police-title">7. Повернення коштів</h5>
+            <ul>
+                <li class="font listof mb-4">7.1 Приєднуючись до Договору, Замовник дає згоду на обробку своїх персональних даних відповідно до Закону України «Про захист персональних даних». Виконавець гарантує конфіденційність наданої інформації та її використання виключно для цілей надання освітніх послуг.</li>
+            </ul>
+            <h5 class="police-title">8. Строк дії договору та інші умови</h5>
+            <ul>
+                <li class="font listof mb-4">8.1 Договір набуває чинності з моменту Акцепту і діє до повного виконання Сторонами своїх зобов'язань.</li>
+                <li class="font listof mb-4">8.2 Всі спори вирішуються шляхом переговорів. Якщо згоду не досягнуто — у судовому порядку згідно з чинним законодавством України.</li>
+
+            </ul>
+
+            <h5 class="police-title">9. Реквізити Виконавця</h5>
+            <ul>
+                <li class="font listof mb-4">ФОП Коломієць Дарина Іванівна</li>
+                <li class="font listof mb-4">РНОКПП: 3942502428</li>
+                <li class="font listof mb-4">Банківський рахунок (ІВАН):</li>
+                <li class="font listof mb-4">Юридична адреса: 20401, Черкаська обл., м. Тальне, вул. Перемоги, буд. 9, кв. 53</li>
+                <li class="listof font">Email: <a href="mailto:sunshineschoolwithu@gmail.com" class="link">sunshineschoolwithu@gmail.com </a></li>
+
+            </ul>
+
+        </div>
+    </section>
+    <footer>
+        <div class="container">
+            <div class="column-sm">
+                <a class="footer-logo d-none d-md-block" href="#">
+                <img src="assets/img/mooooon.svg" alt="logo">
+            </a>
+                <div class="d-md-none">
+                    <address class="footer-nav">
+                        <a href="mailto:sunshineschoolwithu@gmail.com" class="footer-contact">
+					<i class="icon-footer">
+						<svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 24 24" id="gmail">
+  <path d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 0 1 0 19.366V5.457c0-2.023 2.309-3.178 3.927-1.964L5.455 4.64 12 9.548l6.545-4.91 1.528-1.145C21.69 2.28 24 3.434 24 5.457z"></path>
+</svg>
+					</i>sunshineschoolwithu@gmail.com</a>
+                        <a href="tel:+380687347182" class="footer-contact">
+					<i class="icon-footer">
+					<svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 24 24" id="phone">
+  <path fill="none" d="M0 0h24v24H0V0z"></path>
+  <path d="M19.23 15.26l-2.54-.29c-.61-.07-1.21.14-1.64.57l-1.84 1.84c-2.83-1.44-5.15-3.75-6.59-6.59l1.85-1.85c.43-.43.64-1.03.57-1.64l-.29-2.52c-.12-1.01-.97-1.77-1.99-1.77H5.03c-1.13 0-2.07.94-2 2.07.53 8.54 7.36 15.36 15.89 15.89 1.13.07 2.07-.87 2.07-2v-1.73c.01-1.01-.75-1.86-1.76-1.98z"></path>
+</svg>
+				</i>+38 (068) 734-71-82</a>
+                    </address>
+                </div>
+
+            </div>
+
+            <div class="column-lg">
+                <nav class="footer-nav">
+                    <h5 class="footer-title">Інформація</h5>
+                    <a href="global-information.html" class="footer-link">Про нас</a>
+                    <a href="services.html" class="footer-link">Послуги</a>
+                    <a href="price.html" class="footer-link">Ціни</a>
+                </nav>
+                <nav class="footer-nav">
+                    <h5 class="footer-title">Клієнтам</h5>
+                    <a href="public-ofert.html" class="footer-link">Публічна оферта</a>
+                    <a href="services.html" class="footer-link">Соціальні мережі</a>
+                </nav>
+
+                <nav class="footer-nav d-lg-none">
+                    <h5 class="footer-title ">Правова інформація</h5>
+                    <a href="#" class="footer-link">Політика конфіденційності</a>
+                    <a href="#" class="footer-link">Умови та положення</a>
+                </nav>
+                <div class="d-none d-lg-block">
+                    <address class="footer-nav">
+                        <h5 class="footer-title">Контакти</h5>
+                        <a href="mailto:sunshineschoolwithu@gmail.com" class="footer-contact">
+					<i class="icon-footer">
+						<svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 24 24" id="gmail">
+  <path d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 0 1 0 19.366V5.457c0-2.023 2.309-3.178 3.927-1.964L5.455 4.64 12 9.548l6.545-4.91 1.528-1.145C21.69 2.28 24 3.434 24 5.457z"></path>
+</svg>
+					</i>sunshineschoolwithu@gmail.com</a>
+                        <a href="tel:+380687347182" class="footer-contact">
+					<i class="icon-footer">
+					<svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 24 24" id="phone">
+  <path fill="none" d="M0 0h24v24H0V0z"></path>
+  <path d="M19.23 15.26l-2.54-.29c-.61-.07-1.21.14-1.64.57l-1.84 1.84c-2.83-1.44-5.15-3.75-6.59-6.59l1.85-1.85c.43-.43.64-1.03.57-1.64l-.29-2.52c-.12-1.01-.97-1.77-1.99-1.77H5.03c-1.13 0-2.07.94-2 2.07.53 8.54 7.36 15.36 15.89 15.89 1.13.07 2.07-.87 2.07-2v-1.73c.01-1.01-.75-1.86-1.76-1.98z"></path>
+</svg>
+				</i>+38 (068) 734-71-82</a>
+                    </address>
+                </div>
+
+
+            </div>
+        </div>
+        <div class="container-copyright">
+            <span>ⓒ 2026. Sunshine. Всі права захищені</span>
+            <nav class="copyright-nav">
+                <a href="policy.html" class="police-link">політика конфіденційності</a>
+            </nav>
+        </div>
+    </footer>
+    <script async src="assets/js/custom.js"></script>
+    <script async src="assets/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

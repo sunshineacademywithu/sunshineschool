@@ -30,6 +30,13 @@ if (!privacyConsent) {
   return;
 }
 
+const publicConsent = form.querySelector('[name="publicConsent"]')?.checked || false;
+
+if (!publicConsent) {
+  alert('Підтвердіть згоду з публічною офертою.');
+  return;
+}
+
     const formData = {
       name: form.querySelector('[name="name"]')?.value.trim() || '',
       email: form.querySelector('[name="email"]')?.value.trim() || '',
@@ -40,6 +47,7 @@ if (!privacyConsent) {
       communication: communicationType,
       comment: form.querySelector('[name="comment"]')?.value.trim() || '',
       privacyConsent: privacyConsent,
+      publicConsent: publicConsent,
     };
 
     const CLOUDFLARE_URL = 'https://holy-boat-68f3.sunshineschoolwithu.workers.dev/';
