@@ -81,7 +81,7 @@ if (!publicConsent) {
 
   
 // Форма для вибору інтенсивності і графіку 
-  document.addEventListener("DOMContentLoaded", () => {
+  const initializeServiceDropdowns = () => {
 
     const daysByIntensity = {
         twotimes: [
@@ -113,6 +113,8 @@ if (!publicConsent) {
     const intensity = document.getElementById("intensity");
     const day = document.getElementById("day");
     const hour = document.getElementById("hour");
+
+    if (!intensity || !day || !hour) return;
 
     // відкриття dropdown
     document.querySelectorAll(".option").forEach(select => {
@@ -213,7 +215,13 @@ if (!publicConsent) {
         });
     });
 
-});
+};
+
+if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", initializeServiceDropdowns, { once: true });
+} else {
+    initializeServiceDropdowns();
+}
 
  // const intensitySelect = document.querySelector("#intensity");
  // const daySelect = document.querySelector("#day");
